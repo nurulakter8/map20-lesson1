@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:lesson1/screens/startscreen.dart';
 
 void main() {
   runApp(Lesson1App()); // runApp to trun mobile application 
@@ -10,7 +11,10 @@ class Lesson1App extends StatelessWidget{  //StatelessWidget is a super class fo
   @override
   Widget build(BuildContext context) {  // build is an Abstruct from superclass thats why we'll have to include it there.
     return MaterialApp(                 // MaterialApp is the root of the app that returns when build is called while application is running. 
-      home: Text('My first App'),
+      routes: {                 //routes is a map data structure 
+        '/' : (BuildContext context) { return StartScreen();},    // key is the string and the value is the function. Will have to 
+                                                                                //do that for multiple screen.
+        },
     );  
       
   }
