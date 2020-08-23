@@ -11,8 +11,9 @@ class Lesson1App extends StatelessWidget{  //StatelessWidget is a super class fo
   @override
   Widget build(BuildContext context) {  // build is an Abstruct from superclass thats why we'll have to include it there.
     return MaterialApp(                 // MaterialApp is the root of the app that returns when build is called while application is running. 
+      initialRoute: StartScreen.routName,  // tells route which will be the initial screen              
       routes: {                 //routes is a map data structure 
-        '/' : (BuildContext context) { return StartScreen();},    // key is the string and the value is the function. Will have to 
+        StartScreen.routName : (BuildContext context) { return StartScreen();},    // key is the string (declared as static const) and the value is the function. Will have to 
                                                                                 //do that for multiple screen.
         },
     );  
