@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:lesson1/screens/imagedemo_screen.dart';
 import 'package:lesson1/screens/startscreen.dart';
 
 void main() {
@@ -15,6 +16,7 @@ class Lesson1App extends StatelessWidget{  //StatelessWidget is a super class fo
       routes: {                 //routes is a map data structure 
         StartScreen.routName : (BuildContext context) { return StartScreen();},    // key is the string (declared as static const) and the value is the function. Will have to 
                                                                                 //do that for multiple screen.
+        ImageDemoScreen.routName: (context) { return ImageDemoScreen();},
         },
     );  
       
