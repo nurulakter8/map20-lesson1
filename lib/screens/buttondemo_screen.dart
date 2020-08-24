@@ -9,6 +9,11 @@ class ButtonDemoScreen extends StatelessWidget {
       appBar: AppBar(
         title: Text('Button Demo'),
       ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () => print('floating action button'),
+        child: Icon(Icons.add),
+        backgroundColor: Colors.red[200],
+      ),
       body: Column(children: <Widget>[
         RaisedButton(
           onPressed: () {
@@ -25,12 +30,30 @@ class ButtonDemoScreen extends StatelessWidget {
               bottom: 10.0),
         ),
         RaisedButton.icon(
-            onPressed: () => print('raised button 2 is pressed'),
-            icon: Icon(
-              Icons.book,
-              color: Colors.red,
-            ),
-            label: Text('Raised Button 2'))
+          onPressed: () => print('raised button 2 is pressed'),
+          icon: Icon(
+            Icons.book,
+            color: Colors.red,
+          ),
+          label: Text('Raised Button 2'),
+        ),
+        FlatButton(
+          onPressed: () => print('flat button is pressed'),
+          color: Colors.teal[900],
+          splashColor: Colors.teal[100],
+          child: Text(
+            'Flat Button',
+            style: TextStyle(color: Colors.white, fontSize: 20.0),
+          ),
+        ),
+        IconButton(
+          icon: Icon(
+            Icons.broken_image,
+            size: 70.0,
+            color: Colors.blue,
+          ),
+          onPressed: () => print('Icon button is pressed'),
+        ),
       ]),
     );
   }
