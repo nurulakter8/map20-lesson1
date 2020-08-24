@@ -14,9 +14,9 @@ class Lesson1App extends StatelessWidget{  //StatelessWidget is a super class fo
     return MaterialApp(                 // MaterialApp is the root of the app that returns when build is called while application is running. 
       initialRoute: StartScreen.routName,  // tells route which will be the initial screen              
       routes: {                 //routes is a map data structure 
-        StartScreen.routName : (BuildContext context) { return StartScreen();},    // key is the string (declared as static const) and the value is the function. Will have to 
+        StartScreen.routName : (context) => StartScreen(),    // key is the string (declared as static const) and the value is the function. Will have to 
                                                                                 //do that for multiple screen.
-        ImageDemoScreen.routName: (context) { return ImageDemoScreen();},
+        ImageDemoScreen.routName: (context) => ImageDemoScreen(),
         },
     );  
       

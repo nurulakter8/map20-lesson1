@@ -18,9 +18,8 @@ class StartScreen extends StatelessWidget {
         children: <Widget>[
           RaisedButton(
             child: Text('Image Demo'),
-            onPressed: () {
-              Navigator.pushNamed(context, ImageDemoScreen.routName);   // on press we will go to new image screen page
-            },
+            onPressed: () => Navigator.pushNamed(context, ImageDemoScreen.routName),   // on press we will go to new image screen page
+            // we can use => when we only have one statement. Don't need to use curly brace
           ),
           RaisedButton.icon(
             onPressed: () {print ('button demo');},
