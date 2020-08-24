@@ -17,7 +17,7 @@ class ButtonDemoScreen extends StatelessWidget {
       body: Column(children: <Widget>[
         RaisedButton(
           onPressed: () {
-            print('rasied button1 is pressed');
+            print('raised button1 is pressed');
           },
           elevation: 10.0,
           child: Text('Raised button 1'),
