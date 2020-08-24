@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:lesson1/screens/buttondemo_screen.dart';
 import 'package:lesson1/screens/imagedemo_screen.dart';
 import 'package:lesson1/screens/startscreen.dart';
 
@@ -17,6 +18,7 @@ class Lesson1App extends StatelessWidget{  //StatelessWidget is a super class fo
         StartScreen.routName : (context) => StartScreen(),    // key is the string (declared as static const) and the value is the function. Will have to 
                                                                                 //do that for multiple screen.
         ImageDemoScreen.routName: (context) => ImageDemoScreen(),
+        ButtonDemoScreen.routeName: (context) => ButtonDemoScreen(), 
         },
     );  
       

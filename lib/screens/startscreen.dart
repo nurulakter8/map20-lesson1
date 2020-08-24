@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:lesson1/screens/buttondemo_screen.dart';
 import 'package:lesson1/screens/imagedemo_screen.dart';
 
 class StartScreen extends StatelessWidget {
@@ -22,7 +23,7 @@ class StartScreen extends StatelessWidget {
             // we can use => when we only have one statement. Don't need to use curly brace
           ),
           RaisedButton.icon(
-            onPressed: () {print ('button demo');},
+            onPressed: () => Navigator.pushNamed(context, ButtonDemoScreen.routeName),
             icon: Icon(Icons.ac_unit, color: Colors.red[900],),       // there are more under flutter Icon API
             label: Text('Button Demo'),
           )

@@ -16,6 +16,12 @@ class ImageDemoScreen extends StatelessWidget {
           Container(color: Colors.blue, height: 200.0, child: Image.network(
               //Image.network provides to add link for image
               'https://m.media-amazon.com/images/I/51pl3By7R+L._AC_UY218_.jpg')),
+          Icon(
+            // display Icon since we used Listview and it has several widgets
+            Icons.battery_alert,
+            color: Colors.red,
+            size: 100,
+          ),
           Container(
             color: Colors.grey,
             height: 300.0,
@@ -25,7 +31,8 @@ class ImageDemoScreen extends StatelessWidget {
           Container(
             color: Colors.black,
             height: 300,
-            child: Image.asset('images/img1.jpeg'),   // Image.asset we can display from the device
+            child: Image.asset(
+                'images/img1.jpeg'), // Image.asset we can display from the device
           ),
         ],
       ),
