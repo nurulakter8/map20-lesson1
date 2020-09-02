@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:lesson1/screens/buttondemo_screen.dart';
+import 'package:lesson1/screens/fontdemo_screen.dart';
 import 'package:lesson1/screens/imagedemo_screen.dart';
 import 'package:lesson1/screens/startscreen.dart';
 
@@ -19,6 +20,7 @@ class Lesson1App extends StatelessWidget{  //StatelessWidget is a super class fo
                                                                                 //do that for multiple screen.
         ImageDemoScreen.routName: (context) => ImageDemoScreen(),
         ButtonDemoScreen.routeName: (context) => ButtonDemoScreen(), 
+        FontDemoScreen.routeName: (context) => FontDemoScreen(),
         },
     );  
       
