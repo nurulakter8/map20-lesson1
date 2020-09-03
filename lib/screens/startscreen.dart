@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:lesson1/screens/buttondemo_screen.dart';
+import 'package:lesson1/screens/expandeddemo.dart';
 import 'package:lesson1/screens/fontdemo_screen.dart';
 import 'package:lesson1/screens/imagedemo_screen.dart';
 import 'package:lesson1/screens/rowcolumndemo_screen.dart';
@@ -18,6 +19,7 @@ class StartScreen extends StatelessWidget {
       ),
       body: Column(
         // column is a layout Widget
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
           RaisedButton(
             child: Text('Image Demo'),
@@ -38,6 +40,11 @@ class StartScreen extends StatelessWidget {
             onPressed: () => Navigator.pushNamed(context, RowColumnDemoScreen.routeName),
             icon: Icon(Icons.router, color: Colors.red[900],),       // there are more under flutter Icon API
             label: Text('Row/Column Demo'),
+          ),
+          RaisedButton.icon(
+            onPressed: () => Navigator.pushNamed(context, ExpandedDemoScreen.routeName),
+            icon: Icon(Icons.router, color: Colors.red[900],),       // there are more under flutter Icon API
+            label: Text('Expanded Demo'),
           ),
         ],
       ),
