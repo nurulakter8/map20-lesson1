@@ -3,6 +3,7 @@ import 'package:lesson1/screens/buttondemo_screen.dart';
 import 'package:lesson1/screens/expandeddemo.dart';
 import 'package:lesson1/screens/fontdemo_screen.dart';
 import 'package:lesson1/screens/imagedemo_screen.dart';
+import 'package:lesson1/screens/namecard.dart';
 import 'package:lesson1/screens/rowcolumndemo_screen.dart';
 
 class StartScreen extends StatelessWidget {
@@ -22,7 +23,7 @@ class StartScreen extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
           RaisedButton(
-            child: Text('Image Demo'),
+            child: Text('Image Demo', style: Theme.of(context).textTheme.headline6,), //heading 6 is title theme from startscreen 
             onPressed: () => Navigator.pushNamed(context, ImageDemoScreen.routName),   // on press we will go to new image screen page
             // we can use => when we only have one statement. Don't need to use curly brace
           ),
@@ -45,6 +46,11 @@ class StartScreen extends StatelessWidget {
             onPressed: () => Navigator.pushNamed(context, ExpandedDemoScreen.routeName),
             icon: Icon(Icons.router, color: Colors.red[900],),       // there are more under flutter Icon API
             label: Text('Expanded Demo'),
+          ),
+          RaisedButton.icon(
+            onPressed: () => Navigator.pushNamed(context, NameCardScreen.routeName),
+            icon: Icon(Icons.router, color: Colors.red[900],),       // there are more under flutter Icon API
+            label: Text('Namecard Demo'),
           ),
         ],
       ),
